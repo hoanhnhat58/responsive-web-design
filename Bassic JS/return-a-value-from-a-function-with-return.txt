@@ -1,0 +1,6 @@
+function timesFive(num){
+  return num * 5;
+}
+var a = timesFive(5);
+var b = timesFive(2);
+var a = timesFive(0);
