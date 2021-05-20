@@ -1,3 +1,9 @@
+html , body{
+    min-height: 100%;
+}
+body{
+
+height: 100%;}
 div.page-wrapper{
     
     background-color: #eee;
@@ -11,9 +17,7 @@ div.page-wrapper{
     text-align: center;
     margin-left: 20px;
 }
-header{
-    
-}
+
 #header{
     width: 100%;
     position: fixed;
@@ -27,16 +31,17 @@ header{
 li{
     list-style-type: none;
 }
-ul {
+nav ul {
     width: 35vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-ul li a {
+nav ul li a {
     padding: 0 30px 0 30px;
     font-size: 16px;
     color: black;
+    font-weight: 400;
 }
 #hero-text{
     margin-top: 75px;
@@ -69,6 +74,15 @@ ul li a {
     background-color: orange;
     transition: background-color 1s;
 }
+
+.icon > .fa-truck{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
 .features .icon {
     display: flex;
     align-items: center;
@@ -83,10 +97,14 @@ ul li a {
     justify-content: center;
     height: 125px;
     width: 60vw;
-    padding: 5px;
+    padding-left: 10px;
 }
 .features .detail h2{
     font-size: 20px;
+    font-weight: bold;
+}
+.features .detail p{
+    font-weight: 500;
 }
 .works {
     text-align: center;
@@ -139,6 +157,7 @@ ul li a {
     font-weight: 700;
 }
 .product > ol {
+    padding-left: 0;
     margin: 15px 0;
 }
 .product > ol > li {
@@ -148,7 +167,9 @@ ul li a {
     margin-top: 15px;
 }
 footer {
-    margin-top: 30px;
+    max-width: 120vh;
+    width: 100%;
+    margin: 30px auto 0 auto ;
     background-color: #ddd;
     padding: 20px;
 }
@@ -156,8 +177,13 @@ footer > ul {
     display: flex;
     justify-content: flex-end;
 }
+
 footer > ul > li {
     padding: 0 10px;
+}
+footer > ul > li a {
+    font-weight: 500;
+    color: black;
 }
 footer > span {
     margin-top: 5px;
@@ -166,4 +192,82 @@ footer > span {
     font-size: 0.9em;
     color: #444;
 }
+@media (max-width: 320px) {
+    body {
+        min-width: 320px;
+    }
+    #hero-text{
+        margin-top: 180px;
+    }
+
+}
+@media (max-width: 768px) {
+  #header{
+      display: inline;
+      min-height: 75px;
+      padding: 0px 20px;
+      justify-content:center;
+      background-color: #eee;
+  }
+  #pricing{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;    
+    align-items: center;
+    align-content: center;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    margin: 10 auto;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.features .detail{
+    padding-left: 20px;
+}
+.page-wrapper footer {
+    margin: 30px 0 0 0;
+    background-color: #ddd;
+    padding: 20px;
+}
+  }
+  @media (max-width: 620px){
+      .detail{
+          text-align: center;
+          width: 100%;
+          padding: 0;
+          height: 150px;
+      }
+     .features .icon{
+          display: none;
+      }
+      .features .detail {
+          padding-left: 0;
+          margin: 20px 0  20px 0;
+      }
+      #header nav{
+          flex-direction: column;
+      }
+      .logo img {
+          margin-left: 0;
+      }
+      nav ul{
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+      }
+      #hero-text{
+          margin-top: 180px;
+      }
+
+  }
 
