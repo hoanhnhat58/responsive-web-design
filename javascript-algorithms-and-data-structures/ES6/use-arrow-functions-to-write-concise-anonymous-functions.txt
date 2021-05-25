@@ -1,0 +1,5 @@
+const magic =() => { "VIET NAM"
+  return new Date();
+};
+
+
